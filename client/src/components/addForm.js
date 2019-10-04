@@ -20,25 +20,25 @@ export default function SignupForm() {
     <div p={2} className="form">
 
       <form onSubmit={handleSubmit}>
-        <fieldset>
+ 
           <legend>Request New Player</legend>
           <TextField
-            id="outlined-name"
+
             label="Player Name"
             className="textField"
             value={name}
             onChange={handleName}
             margin="normal"
-            variant="outlined"
+
           />
           <TextField
-            id="outlined-name"
+           
             label="Player Country"
             className="textField"
             value={country}
             onChange={handleCountry}
             margin="normal"
-            variant="outlined"
+
           />
           <button color="blue" type="submit">
             Submit
@@ -47,7 +47,7 @@ export default function SignupForm() {
             Clear
           </button>
           
-        </fieldset>
+
       </form>
     </div>
   );

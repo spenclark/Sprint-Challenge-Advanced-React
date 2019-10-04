@@ -34,3 +34,22 @@ code {
   width: 30%;
   
 }
+
+.form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 3% auto;
+}
+input{
+  padding: 10px;
+}
+
+button{
+  margin: 3%;
+  padding: 10px 18px;
+  background: darkgrey;
+  border: 1px grey solid;
+  border-radius: 15px; 
+}

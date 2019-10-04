@@ -25,7 +25,7 @@ class App extends React.Component {
   render() {
   return (
     <div className="App">
-    <div className="header"> Advanced React Sprint: World Cup Players by Search </div>
+    <div className="header"id="title"> Advanced React Sprint: World Cup Players by Search </div>
     <div>
       <SingupForm />
     </div>
