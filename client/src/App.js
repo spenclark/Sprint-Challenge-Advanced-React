@@ -27,7 +27,7 @@ class App extends React.Component {
     <div className="App">
     <div className="header"> Advanced React Sprint: World Cup Players by Search </div>
     <div>
-
+      <SingupForm />
     </div>
     
     <div className="chartDiv">

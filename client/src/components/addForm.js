@@ -3,53 +3,40 @@ import React from 'react'
 import TextField from '@material-ui/core/TextField';
 
 export default function SignupForm() {
-  const [username, handleUsername, setUsername] = useInput('username', '');
-  const [email, handleEmail, setEmail] = useInput('email', '');
-  const [password, handlePassword, setRole] = useInput('role', '');
-
+  const [name, handleName, setName] = useInput('Name:', '');
+  const [country, handleCountry, setCountry] = useInput('Country', '');
+  
   const handleSubmit = e => {
     e.preventDefault();
   };
 
   const clearForm = e => {
     e.preventDefault();
-    setUsername('');
-    setEmail('');
-    setRole('');
+    setName('');
+    setCountry('');
   };
 
   return (
     <div p={2} className="form">
 
-      <h2>Start Trading Crypto Currencies</h2>
-      <p>All we need is an email!</p>
       <form onSubmit={handleSubmit}>
         <fieldset>
-          <legend>Add New Client</legend>
+          <legend>Request New Player</legend>
           <TextField
             id="outlined-name"
-            label="Username"
+            label="Player Name"
             className="textField"
-            value={username}
-            onChange={handleUsername}
+            value={name}
+            onChange={handleName}
             margin="normal"
             variant="outlined"
           />
           <TextField
             id="outlined-name"
-            label="email"
+            label="Player Country"
             className="textField"
-            value={email}
-            onChange={handleEmail}
-            margin="normal"
-            variant="outlined"
-          />
-          <TextField
-            id="outlined-name"
-            label="password"
-            className="textField"
-            value={password}
-            onChange={handlePassword}
+            value={country}
+            onChange={handleCountry}
             margin="normal"
             variant="outlined"
           />
