@@ -1,6 +1,9 @@
 import React from 'react';
 import axios from 'axios'
+
 import './App.css';
+import Player from './components/player'
+import SingupForm from './components/addForm'
 
 class App extends React.Component {
   constructor() {
@@ -22,7 +25,27 @@ class App extends React.Component {
   render() {
   return (
     <div className="App">
-    <div>Advanced React Sprint: World Cup Players by Search </div>
+    <div className="header"> Advanced React Sprint: World Cup Players by Search </div>
+    <div>
+
+    </div>
+    
+    <div className="chartDiv">
+            <div className="player-row">
+              <div className="player-cell">
+              <h4>Name</h4>
+              </div>
+              <div className="player-cell"> 
+              <h4>Country</h4>
+              </div>
+              <div className="player-cell">
+              <h4>Search Rank</h4>
+              </div>
+            </div>
+              {this.state.players.map(player =>
+              <Player player={player}/>
+               )}
+        </div>
     </div>
   );
   }
