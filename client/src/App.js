@@ -1,26 +1,51 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      players: []
+    }
+  }
+
+  componentDidMount() {
+    axios
+      .get("http://localhost:5000/api/players")
+      .then(res => this.setState({
+        players: res.data
+      }))
+      .catch(res => console.log(res))
+  }
+
+  render() {
+    return (
+      <div className="App">
+      <div className="header"id="title"> Advanced React Sprint: World Cup Players by Search </div>
+      <div>
+        <SingupForm />
+      </div>
+      
+      <div className="chartDiv">
+              <div className="player-row">
+                <div className="player-cell">
+                <h4>Name</h4>
+                </div>
+                <div className="player-cell"> 
+                <h4>Country</h4>
+                </div>
+                <div className="player-cell">
+                <h4>Search Rank</h4>
+                </div>
+              </div>
+                {this.state.players.map(player =>
+                <Player player={player}/>
+                 )}
+          </div>
+      </div>
+     );
+    }
 }
 
 export default App;
