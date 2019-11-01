@@ -16,3 +16,5 @@ const Player = props => {
         </div>
     )
 }
+
+export default Player

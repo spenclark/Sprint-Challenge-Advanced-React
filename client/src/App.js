@@ -1,7 +1,8 @@
 import React from 'react';
+import axios from 'axios'
 
 import './App.css';
-
+import Player from './components/player'
 class App extends React.Component {
   constructor() {
     super();
@@ -24,7 +25,7 @@ class App extends React.Component {
       <div className="App">
       <div className="header"id="title"> Advanced React Sprint: World Cup Players by Search </div>
       <div>
-        <SingupForm />
+        
       </div>
       
       <div className="chartDiv">
