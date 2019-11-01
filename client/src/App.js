@@ -26,7 +26,7 @@ class App extends React.Component {
     return (
       <div className="App">
       <div className="header"id="title"> Advanced React Sprint: World Cup Players by Search </div>
-      <div>
+      <div className="formDiv">
           <h4>Favorite player missing? Fill our the form below to submit a request!</h4>
           <Form />
       </div>
