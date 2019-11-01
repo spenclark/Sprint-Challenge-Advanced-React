@@ -1,10 +1,9 @@
 import React from 'react'
 
 import { useInput } from '../hooks/useInput';
-import React from 'react'
 import TextField from '@material-ui/core/TextField';
 
-export default function SignupForm() {
+export default function Form() {
   const [name, handleName, setName] = useInput('Name:', '');
   const [country, handleCountry, setCountry] = useInput('Country', '');
   

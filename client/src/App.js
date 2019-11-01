@@ -3,6 +3,8 @@ import axios from 'axios'
 
 import './App.css';
 import Player from './components/player'
+import Form from './components/form'
+
 class App extends React.Component {
   constructor() {
     super();
@@ -26,6 +28,7 @@ class App extends React.Component {
       <div className="header"id="title"> Advanced React Sprint: World Cup Players by Search </div>
       <div>
           <h4>Favorite player missing? Fill our the form below to submit a request!</h4>
+          <Form />
       </div>
       
       <div className="chartDiv">
