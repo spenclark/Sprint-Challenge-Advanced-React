@@ -25,19 +25,19 @@ class App extends React.Component {
       <div className="App">
       <div className="header"id="title"> Advanced React Sprint: World Cup Players by Search </div>
       <div>
-        
+          <h4>Favorite player missing? Fill our the form below to submit a request!</h4>
       </div>
       
       <div className="chartDiv">
               <div className="player-row">
                 <div className="player-cell">
-                <h4>Name</h4>
+                  <h4>Name</h4>
                 </div>
                 <div className="player-cell"> 
                 <h4>Country</h4>
-                </div>
+                  </div>
                 <div className="player-cell">
-                <h4>Search Rank</h4>
+                  <h4>Search Rank</h4>
                 </div>
               </div>
                 {this.state.players.map(player =>
